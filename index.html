@@ -15,22 +15,26 @@
 <body>
     <header>
         <div class="gutter-right logo">
-            <img src="./assets/big-logo.png" />
+            <h1>Off to the Polls</h1>
         </div>
     </header>
     <main>
         <section id="input-container">
-            <div span="2">
-                <h2>Type question Here</h2>
-                <input id="question-input" />
+            <div class="inputs">
+                <div>
+                    <h2>Question</h2>
+                    <input id="question-input" />
+                </div>
+                <div>
+                    <h3>Value 1</h3>
+                    <input id="option-1" />
+                    <h3>Value 2</h3>
+                    <input id="option-2" />
+                </div>
             </div>
-            <div>
-                <h3>Value 1</h3>
-                <input id="option-1" />
-                <h3>Value 2</h3>
-                <input id="option-2" />
-            </div>
-            <button id="display-button">Display Results</button>
+            <div id="input-button">
+                <button id="display-button">Display Results</button>
+            </div>    
         </section>
         <section id="current-display-container">
             <div id="option-1-buttons">

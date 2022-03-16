@@ -26,17 +26,18 @@ let count2 = 0;
 let voteArr = [];
 // set event listeners 
 submitButton.addEventListener('click', () => {
-//add values from input
+//clear input
     // const option1Highlight = document.getElementById('option-1-buttons');
     // const option2Highlight = document.getElementById('option-2-buttons');
     question = questionInputEl.value;
     value1 = optionOneEl.value;
     value2 = optionTwoEl.value;
 
-
-
 //display current options and question
     displayCurrentVote();
+    questionInputEl.value = '';
+    optionOneEl.value = '';
+    optionTwoEl.value = '';
 });
 
 option1IncrementButton.addEventListener('click', () => {
