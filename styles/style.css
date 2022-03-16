@@ -63,6 +63,7 @@ header {
     background:rgba(2, 18, 107, 0.75);
     font-family: Prompt, sans-serif;
     color: white;
+    margin-bottom: 30px;
 }
 
 
@@ -87,10 +88,10 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
-    height: var(--footer-height);
+    height: 40px;
     display: flex;
     justify-content: flex-end;
-    background-color: var(--color3);
+    background-color: rgba(233, 7, 7, 1);
     box-shadow: var(--shadow);
 }
 
@@ -102,17 +103,17 @@ footer {
     height: 100%;
     width: 100%;
     padding: 30px;
-    margin: 0 auto;
     border: none;
     background-color: rgba(0, 174, 255, 0.87);
 }
 
 .options {
     display: flex;
-    align-items: center;
+    align-items: left;
     justify-content: center;
     text-align: left;
     flex-direction: column;
+    padding-left: 20px;
 }
 
 #question-input {
@@ -165,7 +166,7 @@ footer {
     grid-template-columns: 1fr 3fr 1fr;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
+    margin-top: 50px;
     border: none;
 }
 
@@ -179,18 +180,6 @@ footer {
     height: 100%;
     border: double white 10px;
     background-color: rgba(0, 174, 255, 0.87);
-}
-
-.current {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 0 auto;
-    width: 100%;
-    height: 100%;
-    border: double white 10px;
-    background-color: rgba(0, 174, 255, 0.87)
 }
 
 #option-1-buttons {
@@ -218,7 +207,6 @@ footer {
     margin: 0 auto;
     width: 90%;
     height: 40px;
-    margin: 0 auto;
     border-radius: 5px;
     font-size: 18px;
     font-family: prompt, sans-serif;
@@ -238,7 +226,7 @@ footer {
     flex-wrap: wrap;
     height: 100%;
     width: 100%;
-    margin: 0 auto;
+    margin-bottom: 50px;
 }
 
 .past{
