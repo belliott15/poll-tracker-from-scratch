@@ -1,4 +1,5 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap');
 body {
     /* feel free to update these css variables for a quick theme */
     
@@ -28,12 +29,14 @@ body {
     --footer-height: 25px;
     
     font-family: 'Titillium Web', sans-serif;
-    background-color: var(--color2);
+    background-image: url(/assets/vote-image.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 main {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 2fr 2fr 1fr;
     justify-content: center;
     align-items: center;
     margin-bottom: calc(var(--footer-height));
@@ -41,29 +44,31 @@ main {
 
 section {
     background-color: var(--color5);
-    max-width: 80%;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: var(--gutter);
-    padding-bottom: var(--gutter);
-    margin-top: var(--gutter);
-    margin-bottom: var(--gutter);
-    border: solid 2px var(--color1);
+    position: relative;
 }
 
 header {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     background-color: var(--color3);
     height: var(--header-height);
     box-shadow: var(--shadow);
+    border-radius: 5px;
+    background:rgba(2, 18, 107, 0.75);
+    font-family: Prompt, sans-serif;
+    color: white;
+    margin-bottom: 30px;
 }
 
 
 h2 {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     font-weight: bold;
 }
 
@@ -83,9 +88,161 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
-    height: var(--footer-height);
+    height: 40px;
     display: flex;
     justify-content: flex-end;
-    background-color: var(--color3);
+    background-color: rgba(233, 7, 7, 1);
     box-shadow: var(--shadow);
 }
+
+.inputs{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 30px;
+    border: none;
+    background-color: rgba(0, 174, 255, 0.87);
+}
+
+.options {
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    text-align: left;
+    flex-direction: column;
+    padding-left: 20px;
+}
+
+#question-input {
+    width: 300px;
+    height: 35px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+#option-1 {
+    border-radius: 5px;
+    width: 90%;
+    height: 25px;
+}
+
+#option-2 {
+    border-radius: 5px;
+    width: 90%;
+    height: 25px;
+}
+
+#input-button {
+    background-color: rgba(0, 174, 255, 0.87);
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#display-button{
+    display: flex;
+    height: 60px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    background-color: rgba(233, 7, 7, 0.842);
+    color: white;
+    font-size: 18px;
+    border: none;
+}
+
+#display-button:hover{
+    border: 5px black inset;
+}
+
+#current-display-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    border: none;
+}
+
+#current-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    border: double white 10px;
+    background-color: rgba(0, 174, 255, 0.87);
+}
+
+#option-1-buttons {
+    background-color: rgba(1, 1, 211, 0.75);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+#option-2-buttons {
+    background-color: rgba(194, 2, 2, 0.75);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#archive-button{
+    margin: 0 auto;
+    width: 90%;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: prompt, sans-serif;
+    background-color: rgba(233, 7, 7, 1);
+}
+
+#archive-button:hover{
+    border: inset black 4px;
+    background-color: rgba(0, 174, 255, 0.87);
+}
+
+#past-display-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.past{
+    box-shadow: 5px 1px 17px 0px rgba(0,0,0,0.82);
+    border: 4px inset black;
+    height: 400px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px;
+    background-image: url(/assets/blue-rays.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
