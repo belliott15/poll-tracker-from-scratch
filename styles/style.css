@@ -111,3 +111,13 @@ footer {
     justify-content: center;
     align-items: center;
 }
+
+#current-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
