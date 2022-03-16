@@ -6,8 +6,6 @@ export function renderPoll(questionObj, value1Obj, count1Obj, value2Obj, count2O
     const option2El = document.createElement('h4');
     const count2El = document.createElement('p');
 
-    pastDisplayEl.classList.add('past');
-
     questionEl.textContent = questionObj;
     option1El.textContent = value1Obj;
     count1El.textContent = count1Obj;

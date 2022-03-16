@@ -87,7 +87,7 @@ function displayCurrentVote(){
     currentDisplayEl.textContent = '';
 
     const displayVoteEl = renderPoll(question, value1, count1, value2, count2);
-
+    currentDisplayEl.classList.add('current');
     currentDisplayEl.append(displayVoteEl);
 }
 
@@ -97,6 +97,10 @@ function displayPastVotes(){
     for (let vote of voteArr) {
         const pastVotesEl = renderPoll(vote.question, vote.value1, vote.count1, vote.value2, vote.count2);
         pastDisplayEl.append(pastVotesEl);
+        pastVotesEl.classList.add('past');
+    }
+    if (voteArr.length >= 4){
+        voteArr.shift();
     }
 }
 
