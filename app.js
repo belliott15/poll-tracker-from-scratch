@@ -18,8 +18,8 @@ const pastDisplayEl = document.querySelector('#past-display-container');
 
 // let state
 let question = '';
-let value1 = '';
-let value2 = '';
+let value1 = 'Option 1';
+let value2 = 'Option 2';
 let count1 = 0;
 let count2 = 0;
 
@@ -27,9 +27,13 @@ let voteArr = [];
 // set event listeners 
 submitButton.addEventListener('click', () => {
 //add values from input
+    // const option1Highlight = document.getElementById('option-1-buttons');
+    // const option2Highlight = document.getElementById('option-2-buttons');
     question = questionInputEl.value;
     value1 = optionOneEl.value;
     value2 = optionTwoEl.value;
+
+
 
 //display current options and question
     displayCurrentVote();
@@ -65,7 +69,17 @@ option2DecrementButton.addEventListener('click', () => {
 
 archiveButton.addEventListener('click', () => {
 //display current game in past game display 
+    let pastVotes = { question: question, value1: value1, count1: count1, value2: value2, count2: count2 };
+    voteArr.push(pastVotes);
+    displayPastVotes();
 //clear the current game info
+    question = 'Question';
+    value1 = 'Option 1';
+    value2 = 'Option 2';
+    count1 = 0;
+    count2 = 0;
+
+    displayCurrentVote();
 });
   // get user input
 function displayCurrentVote(){
@@ -76,7 +90,14 @@ function displayCurrentVote(){
     currentDisplayEl.append(displayVoteEl);
 }
 
+function displayPastVotes(){
+    pastDisplayEl.textContent = '';
 
+    for (let vote of voteArr) {
+        const pastVotesEl = renderPoll(vote.question, vote.value1, vote.count1, vote.value2, vote.count2);
+        pastDisplayEl.append(pastVotesEl);
+    }
+}
 
   // use user input to update state 
   // update DOM to reflect the new state
